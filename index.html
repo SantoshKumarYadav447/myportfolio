@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #333;color:white;
+        }
+
+        #header, #footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        #header h1 {
+            margin: 0;
+        }
+
+        #body {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        #top {
+            min-height: 60px;
+            background: #333;color:white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        #logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: #333;color:white;
+        }
+
+        #menu ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+        }
+
+        #menu ul li {
+            padding: 15px;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        ul li a
+        {
+            text-decoration: none;
+        }
+
+        #menu ul li:hover {
+            background-color: #007BFF;
+            cursor: pointer;
+        }
+
+        /* Section Styles */
+        #about, #services, .contact, .gallery {
+            margin-top: 40px;
+        }
+
+        #about img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        #skill
+        {
+            background: #333;color:white;
+            padding: 50px;
+            border-radius: 10px;
+        }
+
+        #work, .contact {
+            background: #333;color:white;
+            padding: 50px;
+            border-radius: 10px;
+        }
+
+        /* Contact Form */
+        .contact .col {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .txt1, .txta1 {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        #footer {
+            margin-top: 50px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            #menu ul {
+                flex-direction: column;
+            }
+
+            .contact .col {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="body">
+        <!-- Header Section -->
+        <div id="top">
+            <div id="logo">Santosh Kumar Yadav</div>
+            <div id="menu">
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#work">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" onclick="window.print()">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- About Me Section -->
+        <div id="about">
+            <h1 style="text-align: center;">About Me</h1>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="picsky.png" alt="Santosh Kumar Yadav" style="max-width: 300px; margin-right: 40px;">
+                <div style="max-width: 800px;">
+                    <h2>Hi, I'm Santosh!</h2>
+                    <p style="text-align: justify;">
+                        I am a passionate web developer with a B-Tech degree and practical experience in building responsive, 
+                        user-centric websites and web applications. 
+                        Currently interning at TECHPILE TECHNOLOGY PVT. LTD., 
+                        I specialize in both front-end and back-end technologies, including HTML, CSS, JavaScript, and frameworks such as React and Node.js. 
+                        Always eager to take on new challenges, I am committed to continuously expanding my skill set and contributing to innovative projects
+                     </p>
+                    <ul style="list-style: none;">
+                        <li><b>Name:</b> Santosh Kumar Yadav</li>
+                        <li><b>Age:</b> 22</li>
+                        <li><b>Occupation:</b>Full Stack Web Developer</li>
+                    </ul>
+                    <div style="font-size: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skill">
+            <h1 style="text-align: center;">My Skills</h1>
+            <p style="text-align: center; font-size: 20px; margin-bottom: 40px;">I have experience working with various technologies and tools in the web development field.</p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+                <!-- Skill Item: Python -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="p.jpg" alt="Python" style="width: 70px; margin-bottom: 10px;">
+                    <h3>Python</h3>
+                </div>
+        
+                <!-- Skill Item: C Programming -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="c.png" alt="C Programming" style="width: 70px; margin-bottom: 10px;">
+                    <h3>C Programming</h3>
+                </div>
+        
+                <!-- Skill Item: HTML -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="ht.png" alt="HTML" style="width: 70px; margin-bottom: 10px;">
+                    <h3>HTML</h3>
+                </div>
+        
+                <!-- Skill Item: CSS -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="cs.jpg" alt="CSS" style="width: 70px; margin-bottom: 10px;">
+                    <h3>CSS</h3>
+                </div>
+        
+                <!-- Skill Item: JavaScript -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="js.png" alt="JavaScript" style="width: 70px; margin-bottom: 10px;">
+                    <h3>JavaScript</h3>
+                </div>
+        
+                <!-- Skill Item: Django -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="dj.jpg" alt="Django" style="width: 70px; margin-bottom: 10px;">
+                    <h3>Django</h3>
+                </div>
+        
+                <!-- Skill Item: Bootstrap -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="bs.jpg" alt="Bootstrap" style="width: 70px; margin-bottom: 10px;">
+                    <h3>Bootstrap</h3>
+                </div>
+        
+                <!-- Skill Item: jQuery -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="jq.png" alt="jQuery" style="width: 70px; margin-bottom: 10px;">
+                    <h3>jQuery</h3>
+                </div>
+        
+                <!-- Skill Item: React.js -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="rt.png" alt="React.js" style="width: 70px; margin-bottom: 10px;">
+                    <h3>React.js</h3>
+                </div>
+        
+                <!-- Skill Item: Node.js -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="nj.png" alt="Node.js" style="width: 70px; margin-bottom: 10px;">
+                    <h3>Node.js</h3>
+                </div>
+        
+                <!-- Skill Item: Express.js -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="ex.png" alt="Express.js" style="width: 70px; margin-bottom: 10px;">
+                    <h3>Express.js</h3>
+                </div>
+        
+                <!-- Skill Item: MongoDB -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="md.png" alt="MongoDB" style="width: 70px; margin-bottom: 10px;">
+                    <h3>MongoDB</h3>
+                </div>
+        
+                <!-- Skill Item: MySQL -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="ms.png" alt="MySQL" style="width: 70px; margin-bottom: 10px;">
+                    <h3>MySQL</h3>
+                </div>
+        
+                <!-- Skill Item: PowerBI -->
+                <div class="skill" style="text-align: center; width: 150px;">
+                    <img src="bi.JPG" alt="Power BI" style="width: 70px; margin-bottom: 10px;">
+                    <h3>Power BI</h3>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!-- Skills Section -->
+        <div id="work">
+            <h1 style="text-align: center;">Work Experience</h1>
+            <p style="font-size: 20px; text-align: center;">I have web development skills, including front-end and back-end technologies.</p>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <div style="width: 45%; margin: 10px;">
+                    <h2 style="text-align: center;">Software Development</h2>
+                    <img src="lo.png" alt="Web Development" style="width: 70px; display: block;margin: 0 auto;">
+                    <p style="font-size: 18px; text-align: justify;">
+                        I have developed various web applications, including e-commerce, news, and shopping websites, 
+                        and have designed multiple unique webpage layouts. I enjoy creating user-friendly, visually appealing, 
+                        and functional web experiences.
+                    </p>
+                </div>
+                <div style="width: 45%; margin: 15px;">
+                    <h2 style="text-align: center;">Website Design</h2>
+                    <img src="lo.png" alt="Website Design" style="width: 70px; display: block;margin: 0 auto;">
+                    <p style="font-size: 18px;text-align: justify;">
+                        I specialize in crafting visually appealing and highly functional website designs, 
+                        ensuring a seamless and intuitive user experience across all devices and platforms
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact" id="contact" style="margin: 0px;">
+            <h1 style="text-align: center;">Contact Us</h1>
+            <div style="display: flex; justify-content: space-between;">
+                <div class="col" style="width: 45%;background: #333;color:white;">
+                    <h2 style="text-align: center;">Send Your Message</h2>
+                    <form>
+                        <input type="text" placeholder="Name" class="txt1"><br>
+                        <input type="number" placeholder="Mobile" class="txt1"><br>
+                        <input type="email" placeholder="Email" class="txt1"><br>
+                        <textarea class="txta1" placeholder="Your Message"></textarea><br>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+                <div class="col" style="width: 45%;background: #333;color:white;">
+                    <h2 style="text-align: center;">Contact Info</h2>
+                    <p><b>Place Address:</b>    Vikas Nagar Secter-3 Lucknow Uttar Pradesh-226022 </p>
+                    <p><b>Call Me:</b> +91-8577875694, +91-9864534434</p>
+                    <p><b>Email:</b> skyjnp2020@gmail.com, skyblp200</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25760.1528571687!2d80.95662080000001!3d26.8959744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1732011823370!5m2!1sen!2sin" width="500" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div id="footer" style="margin: 0px auto;">
+            <div style="text-align: center;">
+                <p>&copy; 2024 <strong>www.myportfolio.com</strong>. All rights reserved.</p>
+                <p>Designed and Developed by <a href="https://yourportfolio.com" style="color: #ff9800; text-decoration: none;">Santosh Kumar Yadav</a></p>
+            </div>
+            <div style="text-align: center; margin-top: 10px; font-size: 35px;">
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        
+    </body>
+</html>
